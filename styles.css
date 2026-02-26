@@ -1,1 +1,63 @@
 /*  your css code here. If applicable */
+/* Reset default margins */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure padding doesn't affect the exact widths/heights */
+* {
+  box-sizing: inherit;
+}
+
+/* Main wrapper to hold nav and main content side-by-side */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* --- Left Column --- */
+nav {
+  background-color: #D7E8D4;
+  width: calc(100vw / 6); /* 1/6th of viewport width */
+  padding: 1em;
+}
+
+/* --- Right Column --- */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Takes up the remaining space */
+}
+
+header {
+  background-color: yellowgreen;
+  height: 20vh; /* 1/5th of viewport height */
+  padding: 1em;
+}
+
+/* Wrapper for Article and Aside */
+.content {
+  display: flex;
+  flex: 1; /* Fills the middle space between header and footer */
+}
+
+article {
+  width: 75%; /* 3/4th of the content section */
+  min-height: 60vh;
+  padding: 1em;
+}
+
+aside {
+  width: 25%; /* 1/4th of the content section */
+  padding: 1em;
+  background-color: #F5F5DC; /* Matches the beige shown in the image */
+}
+
+footer {
+  background-color: yellowgreen;
+  height: 20vh; /* 1/5th of viewport height */
+  padding: 1em;
+}
